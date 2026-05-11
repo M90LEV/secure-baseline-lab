@@ -1,0 +1,42 @@
+# Nmap 7.95 scan initiated Sun May 10 20:11:35 2026 as: /usr/lib/nmap/nmap --privileged -sV -sC -O -oN scans/initial_nmap_scan.txt 192.168.56.3
+Nmap scan report for 192.168.56.3
+Host is up (0.0051s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT      STATE SERVICE      VERSION
+135/tcp   open  msrpc        Microsoft Windows RPC
+139/tcp   open  netbios-ssn  Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds Windows Server 2008 R2 Standard 7600 microsoft-ds
+49154/tcp open  msrpc        Microsoft Windows RPC
+MAC Address: 08:00:27:D2:37:C4 (PCS Systemtechnik/Oracle VirtualBox virtual NIC)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: specialized|phone
+Running: Microsoft Windows 7|Phone
+OS CPE: cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows
+OS details: Microsoft Windows Embedded Standard 7, Microsoft Windows Phone 7.5 or 8.0
+Network Distance: 1 hop
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_nbstat: NetBIOS name: WINDOW, NetBIOS user: <unknown>, NetBIOS MAC: 08:00:27:d2:37:c4 (PCS Systemtechnik/Oracle VirtualBox virtual NIC)
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_clock-skew: mean: 40m03s, deviation: 34m38s, median: 1h00m02s
+| smb-os-discovery: 
+|   OS: Windows Server 2008 R2 Standard 7600 (Windows Server 2008 R2 Standard 6.1)
+|   OS CPE: cpe:/o:microsoft:windows_server_2008::-
+|   Computer name: window
+|   NetBIOS computer name: WINDOW\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2026-05-11T02:12:46+01:00
+| smb2-time: 
+|   date: 2026-05-11T01:12:46
+|_  start_date: 2026-05-11T00:12:05
+| smb2-security-mode: 
+|   2:1:0: 
+|_    Message signing enabled but not required
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun May 10 20:13:23 2026 -- 1 IP address (1 host up) scanned in 107.93 seconds
