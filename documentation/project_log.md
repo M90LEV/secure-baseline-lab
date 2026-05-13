@@ -108,7 +108,32 @@ exploit used in the 2017 WannaCry ransomware attack.
 - VM disk required resizing from 15GB to 30GB before Service Pack 1 could be installed
 - Disk resize required running VBoxManage on the snapshot file, not just the base VDI
 
+## Phase 4 — Web Application Vulnerability Testing
 
+### Environment
+- Attacker: Kali Linux (192.168.56.4)
+- Target: DVWA (Damn Vulnerable Web Application)
+- Date: 13/05/2026
+
+### Setup
+- Installed Apache2, PHP and MySQL on Kali Linux
+- Cloned DVWA from GitHub to /var/www/html/dvwa
+- Configured DVWA database and user credentials
+- Confirmed DVWA accessible at http://127.0.0.1/dvwa
+- Security level set to Low for initial testing
+
+### Evidence
+- screenshots/dvwa-setup-page.png
+- screenshots/dvwa-home.png
+- screenshots/dvwa-security-low.png
+
+### Vulnerabilities to Test
+- SQL Injection
+- XSS (Reflected, Stored, DOM)
+- CSRF
+- Command Injection
+- File Inclusion
+- Brute Force
 
 
 
