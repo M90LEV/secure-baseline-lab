@@ -172,7 +172,7 @@ SQL Injection is a web vulnerability that allows an attacker to interfere with t
 - screenshots/sqli-db-name.png
 
 #### Impact
-A real world attacker could use these techniques to extract sensitive customer data, credentials, or financial information from any database connected to a vulnerable web application.
+A real world attacker could use these techniques to extract sensitive customer data, credentials, or financial information from any database connected to a vulnerable web application. 
 
 
 
